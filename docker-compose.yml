@@ -1,0 +1,7 @@
+solrserver:
+  image: solr
+  ports:
+   - "8983:8983"
+  volumes: 
+  - /home/docker-volumes/swiksolr/solr-data:/solr-data
+  - /home/docker-volumes/swiksolr/solr:/opt/solr/server/solr
