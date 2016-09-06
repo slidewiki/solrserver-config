@@ -1,20 +1,19 @@
 # solrserver-config
 
-
-For first time set up, run the following on the docker host machine.
-If you want to use a different path than /home/docker-volumes/swiksolr, then the file docker-compose.yml must be modified
+As Solr uses it's own user inside the container, you need to run the following script before running `docker-compose up`.
 
 ```
-#create the direcotry that it will host the solr data that needs to be persisted outside the docker container
-mkdir -p /home/docker-volumes/swiksolr/solr-data
-cd /home/docker-volumes/swiksolr
+# Clone this repo and change into it
 
-#download the configuration for the solr core
-git clone https://github.com/slidewiki/solrserver-config.git
+#Prepend sudo if needed
+chown -R 8983:8983 ./solr-*
 
-chown -R 8983:8983 /home/docker-volumes/swiksolr
-
-#start docker
-cd solrserver-config/
+#start Solr
 docker-compose up
+```
+
+Now the permissions do not allow git to access these folders, so in case you want to modify something in there, you need to reassign permission to your own user by:
+
+```
+chown -R myself:myself ./solr-*
 ```
