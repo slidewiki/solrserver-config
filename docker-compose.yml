@@ -3,5 +3,5 @@ solrserver:
   ports:
    - "8983:8983"
   volumes: 
-  - /home/docker-volumes/swiksolr/solr-data:/solr-data
-  - /home/docker-volumes/swiksolr/solrserver-config/solr:/opt/solr/server/solr
+  - ./solr-data:/solr-data
+  - ./solr-config:/opt/solr/server/solr
