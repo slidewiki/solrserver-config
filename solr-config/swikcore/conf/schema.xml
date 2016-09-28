@@ -401,6 +401,7 @@
   <field name="_root_" type="string" docValues="false" indexed="true" stored="false"/>
   <field name="_text_" type="text_general" multiValued="true" indexed="true" stored="false"/>
   <field name="_version_" type="long" indexed="true" stored="false"/>
+  
   <field name="content" type="text_general" multiValued="false" indexed="true" stored="true"/>
   <field name="contentType" type="string" indexed="true" stored="true"/>
   <field name="db_id" type="string" multiValued="false" indexed="true" stored="true"/>
@@ -417,6 +418,7 @@
   <field name="solr_parent_id" type="string" multiValued="false" indexed="true" stored="true"/>
   <field name="speakernotes" type="text_general" multiValued="false" indexed="true" stored="true"/>
   <field name="tags" type="string" multiValued="true" indexed="true" stored="true"/>
+  <field name="usage" type="string" multiValued="true" indexed="true" stored="true"/>
   <field name="timestamp" type="date" multiValued="false" indexed="true" stored="true"/>
   <field name="title" type="text_general" multiValued="false" indexed="true" stored="true"/>
   <field name="user" type="string" multiValued="false" indexed="true" stored="true"/>
