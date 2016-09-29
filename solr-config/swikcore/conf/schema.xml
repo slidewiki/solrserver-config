@@ -414,7 +414,7 @@
   <field name="kind" type="string" multiValued="false" indexed="true" stored="true"/>
   <field name="language" type="string" multiValued="false" indexed="true" stored="true"/>
   <field name="lastUpdate" type="date" multiValued="false" indexed="true" stored="true"/>
-  <field name="license" type="text_general" multiValued="false" indexed="true" stored="true"/>
+  <field name="license" type="string" multiValued="false" indexed="true" stored="true"/>
   <field name="solr_parent_id" type="string" multiValued="false" indexed="true" stored="true"/>
   <field name="speakernotes" type="text_general" multiValued="false" indexed="true" stored="true"/>
   <field name="tags" type="string" multiValued="true" indexed="true" stored="true"/>
