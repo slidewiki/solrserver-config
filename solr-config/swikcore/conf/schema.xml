@@ -425,6 +425,13 @@
   <field name="active" type="boolean" multiValued="false" indexed="true" stored="true"/>
   <field name="parent_deck" type="string" multiValued="false" indexed="true" stored="true"/>
 
+  <!-- user specific fields -->
+  <field name="username" type="text_general" multiValued="false" indexed="true" stored="true"/>
+  <field name="surname" type="text_general" multiValued="false" indexed="true" stored="true"/>
+  <field name="forename" type="text_general" multiValued="false" indexed="true" stored="true"/>
+  <field name="email" type="text_general" multiValued="false" indexed="true" stored="true"/>
+  <field name="organization" type="text_general" multiValued="false" indexed="true" stored="true"/>
+
   <dynamicField name="*_txt_en_split_tight" type="text_en_splitting_tight" indexed="true" stored="true"/>
   <dynamicField name="*_descendent_path" type="descendent_path" indexed="true" stored="true"/>
   <dynamicField name="*_ancestor_path" type="ancestor_path" indexed="true" stored="true"/>
