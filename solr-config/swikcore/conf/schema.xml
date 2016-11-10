@@ -424,7 +424,8 @@
   <field name="user" type="string" multiValued="false" indexed="true" stored="true"/>
   <field name="active" type="boolean" multiValued="false" indexed="true" stored="true"/>
   <field name="parent_deck" type="string" multiValued="false" indexed="true" stored="true"/>
-
+  <field name="contributors" type="string" multiValued="true" indexed="true" stored="true"/>
+  
   <!-- user specific fields -->
   <field name="username" type="text_general" multiValued="false" indexed="true" stored="true"/>
   <field name="surname" type="text_general" multiValued="false" indexed="true" stored="true"/>
