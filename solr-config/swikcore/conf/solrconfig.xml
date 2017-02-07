@@ -822,7 +822,25 @@
     </lst>
   </requestHandler>
 
+  <!-- A request handler for SlideWiki Search Results -->    
+  <requestHandler name="/swSearch" class="solr.SearchHandler">
+    <lst name="defaults">
+      <str name="echoParams">explicit</str>
+      <str name="wt">json</str>
+      <str name="indent">true</str>
+      <str name="defType">edismax</str>
 
+      <!-- default query fields -->
+      <str name="qf">title_en_GB title_de_DE title_el_GR title_it_IT title_pt_PT title_sr_RS title_es_ES title_general content_en_GB content_de_DE content_el_GR content_it_IT content_pt_PT content_sr_RS content_es_ES content_general description_en_GB description_de_DE description_el_GR description_it_IT description_pt_PT description_sr_RS description_es_ES description_general speakernotes_en_GB speakernotes_de_DE speakernotes_el_GR speakernotes_it_IT speakernotes_pt_PT speakernotes_sr_RS speakernotes_es_ES speakernotes_general</str>
+
+      <!-- field aliases -->
+      <str name="f.title.qf">title_en_GB title_de_DE title_el_GR title_it_IT title_pt_PT title_sr_RS title_es_ES title_general</str>
+      <str name="f.content.qf">content_en_GB content_de_DE content_el_GR content_it_IT content_pt_PT content_sr_RS content_es_ES content_general</str>
+      <str name="f.description.qf">description_en_GB description_de_DE description_el_GR description_it_IT description_pt_PT description_sr_RS description_es_ES description_general</str>
+      <str name="f.speakernotes.qf">speakernotes_en_GB speakernotes_de_DE speakernotes_el_GR speakernotes_it_IT speakernotes_pt_PT speakernotes_sr_RS speakernotes_es_ES speakernotes_general</str>
+    </lst>
+  </requestHandler>
+  
   <!-- A Robust Example
        
        This example SearchHandler declaration shows off usage of the
