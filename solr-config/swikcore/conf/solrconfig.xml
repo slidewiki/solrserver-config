@@ -875,7 +875,8 @@
 
     <lst name="invariants">
       <str name="facet.field">autocomplete</str>
-      <str name="facet.sort">count</lst>
+      <str name="facet.sort">count</str>
+    </lst>
   </requestHandler>
 
   <!-- A request handler for SlideWiki User Suggestions -->    
