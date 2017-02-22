@@ -853,8 +853,7 @@
       <str name="spellcheck.collate">true</str>
       <str name="spellcheck.collateExtendedResults">true</str>
       <str name="spellcheck.maxCollationTries">10</str>
-      <str name="spellcheck.maxCollations">5</str>
-      <str name="spellcheck.onlyMorePopular">true</str>
+      <str name="spellcheck.maxCollations">1</str>
     </lst>
     <arr name="last-components">
       <str>spellcheck</str>
@@ -1094,7 +1093,7 @@
       <!-- maximum number of inspections per result. -->
       <int name="maxInspections">5</int>
       <!-- minimum length of a query term to be considered for correction -->
-      <int name="minQueryLength">4</int>
+      <int name="minQueryLength">3</int>
       <!-- maximum threshold of documents a query term can appear to be considered for correction -->
       <float name="maxQueryFrequency">0.01</float>
       <!-- uncomment this to require suggestions to occur in 1% of the documents
