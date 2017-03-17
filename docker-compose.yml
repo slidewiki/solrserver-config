@@ -1,7 +1,17 @@
 solrserver:
   image: solr
-  ports:
-   - "8983:8983"
+  restart: on-failure:5
+  container_name: solr
+  expose:
+    - "8983"
+  environment:
+    - VIRTUAL_HOST=solr.experimental.slidewiki.org
+    - VIRTUAL_PORT=8983
+    - LETSENCRYPT_HOST=solr.experimental.slidewiki.org
+    - LETSENCRYPT_EMAIL=meissner@informatik.uni-leipzig.de
+    #- LETSENCRYPT_TEST=true
+  external_links:
+    - mongodb
   volumes: 
-  - ./solr-data:/solr-data
-  - ./solr-config:/opt/solr/server/solr
+    - ./solr-data:/solr-data
+    - ./solr-config:/opt/solr/server/solr
