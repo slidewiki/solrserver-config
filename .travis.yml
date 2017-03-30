@@ -22,7 +22,6 @@ after_success:
   ; fi
 - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ] ; then
   ./travis_scripts/deploy.sh; rm deployment_keys.tar; fi
-- cd application
 env:
   global:
   - secure: 2j9aDESRPQk3YQ06zecf2/N15dXWnTpNPqKKF/zfO7tIZvQ/BJD/cEedeAmmTIalkLBlUl7sM5k9K8agiqc7dOqpnO2qdAsfFn0J776nIdTuNUcd04ExFzS+Hk7vHs1J09Ds9PXEB9zlXFY0hN4+1Bi0JSehGrq5aPcLBcpEpNh3SYMiynHAK6kvTXpYXq2hYFWUBO1lE6O+LUpzUumVS4tCIvBKcs3Ae6sJYEkBvn0n675VYg3zzrsX9H0P8Gj6QgCszTFl8/BGJxnpfyIvSUY9SK/48ExDxotaWZjJH54htyyBiAYpkOPig4zXH793A6lRt0H0UWnP+gcMKUE0JtpX45A48BOjGGAhZFuG8RaTuEBc8J9PN5zljnX2uBsNtYtVGs4qMQF4n1mqI+UvynA0mdwlO+aQ28OtRjE1XmfSHB2VaSY7/0uEdkhNBaJDDq7zNXBMXJax+8fok3Qf5l1dUXyqaJYG4Hi5Ui3zzARqBWBynxouIPujfvnxnt0w20YQVH9ooYj/BIBB9EGizj3a/Bs/PjxsVVZgbFhKEFgv+MIwyDFuVzWoUwa6gVqA/cpGIT4zlGlBJlImT+1bij2Lyfn1M+VafBFQ/+lY1LxVKErigycPTTbwCOJsOcEsUVxSuR4NqSEfY2H5gIKcYZKn0jXHLk9AnH+RMiThAMo=
