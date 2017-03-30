@@ -1,0 +1,27 @@
+sudo: required
+git:
+  depth: 5
+branches:
+  only:
+  - "/^(?i:SWIK)-.*$/"
+  - master
+language: generic
+services:
+  - docker
+before_install:
+  - docker info
+  - docker pull solr
+  - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ] ; then ./travis_scripts/install_compose.sh ; fi
+script:
+  - docker build . -t slidewiki/solr
+after_success:
+  - openssl aes-256-cbc -K $encrypted_778fbf682c57_key -iv $encrypted_778fbf682c57_iv -in deployment_keys.tar.enc -out deployment_keys.tar -d
+  - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ] ; then  ./travis_scripts/dockerhub.sh; fi
+  - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ] ; then ./travis_scripts/deploy.sh; fi
+  - rm deployment_keys.tar; 
+env:
+  global:
+  - DOCKER_COMPOSE_VERSION=1.6.2
+  - secure: 2j9aDESRPQk3YQ06zecf2/N15dXWnTpNPqKKF/zfO7tIZvQ/BJD/cEedeAmmTIalkLBlUl7sM5k9K8agiqc7dOqpnO2qdAsfFn0J776nIdTuNUcd04ExFzS+Hk7vHs1J09Ds9PXEB9zlXFY0hN4+1Bi0JSehGrq5aPcLBcpEpNh3SYMiynHAK6kvTXpYXq2hYFWUBO1lE6O+LUpzUumVS4tCIvBKcs3Ae6sJYEkBvn0n675VYg3zzrsX9H0P8Gj6QgCszTFl8/BGJxnpfyIvSUY9SK/48ExDxotaWZjJH54htyyBiAYpkOPig4zXH793A6lRt0H0UWnP+gcMKUE0JtpX45A48BOjGGAhZFuG8RaTuEBc8J9PN5zljnX2uBsNtYtVGs4qMQF4n1mqI+UvynA0mdwlO+aQ28OtRjE1XmfSHB2VaSY7/0uEdkhNBaJDDq7zNXBMXJax+8fok3Qf5l1dUXyqaJYG4Hi5Ui3zzARqBWBynxouIPujfvnxnt0w20YQVH9ooYj/BIBB9EGizj3a/Bs/PjxsVVZgbFhKEFgv+MIwyDFuVzWoUwa6gVqA/cpGIT4zlGlBJlImT+1bij2Lyfn1M+VafBFQ/+lY1LxVKErigycPTTbwCOJsOcEsUVxSuR4NqSEfY2H5gIKcYZKn0jXHLk9AnH+RMiThAMo=
+  - secure: LnEC1Xb8Ms7VHvvbzGm3TkEFT8guqVU8hRyk/dcqDtvQbBkMHazrck8+P1dq0UwLCfTM7CGAejicrJgkZO7MPTIw5886N7CuI8e1UA+wfw5Fg26KcdRl3v7mrLGi9xE1/yq9x60ZmjQ5FlyAOHSN6ySl5QLWE7wziRMIepTY5ZukyuDz+Vubv9ptx3iRkVUEzuoHcii66rYoWIIOXoRZtZqqE0ii+0KOl5E3YKkDK4eLggYdiecm99N+nprlbMrkxUsR4uyPzqU9VBM5djKG6LGknFgCf4ksPpWqGpgtYJVLb0fenQCDsKcQLE5T0gU+hv1qzu+zbAJEFlItMxMj5XYkYwT46TrNbyt2qr6ijEUIU+U4a8IyytVPrwmUkNZQqkplXKS/GpQXfu91WgnRN4Np7NrPagPiujcQPIdoFKNZMvRGYUcFun9ZTMM+Gt8gtz3vPS1ZX/9IPMhKafdZcuCMxfv0vJp9g/3sxFf3uwXDus8Lton+VZJoewK4k4zhB78CoHEqs92cQzlP1sfdxI4VROChh4d3J6CvVDpTFalH+Q78j8JCdgqg8LIWhLX3fl/Gj6xq++Xu43JyiNbUii9tKSh+UVo6gMYY0JXBvfaO6K8uLS4JldGD3RtQYypVtTG5A2DxVc24jTW62IRNFR6MWkR2R23ZiOfjIQ5i2Oc=
+  - secure: Uf/WX1h923ezTPZHVijtzmjzuZx84gtwpi1mQRq9e7V9keWFvJ7HuEh3Hj4jNi06pqOMsbvPweFVCk25oUsHWzCQLLnWHtVbmpuZ6tHvrmETlfVMf8j2bQk88oTADAX6+14NSIeizHvAUwk9170b8PA6+8b2xeTVbpxspXB9cZk+X5ZVHlF/xt8NfyGLCkXHBk6KMTcJLOitaqqpcruvyebw5QwGX6zaFu+XltlTt3VlvlLMDZKe3oHN2CmyaIlrVtOshxzpSJIR9SXjP91z2+uhDK7vZ6mb5wTfGLDSSR2kGOwwuNAobfcl0uHD62XCfZcuykAVL0YCKW9qp3r9esWAFJ+N++G8qSiH2iv92blyJrK/sajjoq6RAhp/Hoi7jYjJeyGcd95/XqOfUs3vXN4tv8tB4nmQ3zgDzpXcgNVMuQdnSDGytBxzo5KBBMpKmfcJSwHveWdShdO3k9Hlvfue00fwFXe8jzqc0PcsVcnAUuAXopbYXYhtq6klvhLQsJKiqQAs0kVa9YF6boqmAOLpKo/NCtWgk3ozwGdzKrDGXeb42peoZ4498X4YuiLyOaKxjSinv+cTJ40HZpXmTeoFz7Ep8LwvjOn0FesL4jW/xE6yekJVuOLLYvINGhqR4iIJdP9wITnwYXdKpHLwJrnQhBoozySuRv3YK9FnKXU=
