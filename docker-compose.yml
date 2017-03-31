@@ -1,5 +1,5 @@
 solrserver:
-  image: solr
+  image: slidewiki/solr
   restart: on-failure:5
   container_name: solr
   expose:
