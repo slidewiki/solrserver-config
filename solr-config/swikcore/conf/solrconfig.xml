@@ -901,8 +901,8 @@
       <str name="rows">10</str>
       <str name="indent">true</str>
       <str name="defType">edismax</str>
-      <str name="qf">username^10 surname forename email organization</str>
-      <str name="fl">db_id username</str>
+      <str name="qf">username^10 surname forename</str>
+      <str name="fl">db_id username surname forename</str>
     </lst>
 
     <lst name="invariants">
