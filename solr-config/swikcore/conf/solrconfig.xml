@@ -902,7 +902,12 @@
       <str name="indent">true</str>
       <str name="defType">edismax</str>
       <str name="qf">username^10 surname forename</str>
-      <str name="fl">db_id username surname forename</str>
+      <str name="fl">solr_id db_id username surname forename</str>
+
+      <!-- highlight options -->
+      <str name="hl.fl">username surname forename</str>
+      <str name="hl.simple.pre"><![CDATA[<b>]]></str>
+      <str name="hl.simple.post"><![CDATA[</b>]]></str>
     </lst>
 
     <lst name="invariants">
