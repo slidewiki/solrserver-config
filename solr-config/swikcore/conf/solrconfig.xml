@@ -864,7 +864,7 @@
     <lst name="invariants">
       <str name="facet.field">kind</str>
       <str name="facet.field">language</str>
-      <str name="facet.field">license</str>
+      <!-- <str name="facet.field">license</str> -->
       <str name="facet.field">contributors</str>
     </lst>
   </requestHandler>
