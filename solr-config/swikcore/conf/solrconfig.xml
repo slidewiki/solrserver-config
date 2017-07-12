@@ -866,6 +866,7 @@
       <str name="facet.field">language</str>
       <!-- <str name="facet.field">license</str> -->
       <str name="facet.field">contributors</str>
+      <str name="json.nl">arrmap</str>
     </lst>
   </requestHandler>
 
