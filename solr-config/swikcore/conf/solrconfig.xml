@@ -860,12 +860,7 @@
       <str>spellcheck</str>
     </arr>
 
-    <!-- facets are provided only for these fields -->
     <lst name="invariants">
-      <str name="facet.field">kind</str>
-      <str name="facet.field">language</str>
-      <!-- <str name="facet.field">license</str> -->
-      <str name="facet.field">contributors</str>
       <str name="facet.mincount">1</str>
       <str name="json.nl">arrmap</str>
     </lst>
