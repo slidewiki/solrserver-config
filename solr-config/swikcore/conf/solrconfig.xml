@@ -841,10 +841,11 @@
       <str name="f.speakernotes.qf">speakernotes_en_GB speakernotes_de_DE speakernotes_el_GR speakernotes_it_IT speakernotes_pt_PT speakernotes_sr_RS speakernotes_es_ES speakernotes_general</str>
       
       <!-- field alias for results -->
-      <str name="fl">*, title:title_en_GB title:title_de_DE title:title_el_GR title:title_it_IT title:title_pt_PT title:title_sr_RS title:title_es_ES title:title_general content:content_en_GB content:content_de_DE content:content_el_GR content:content_it_IT content:content_pt_PT content:content_sr_RS content:content_es_ES content:content_general description:description_en_GB description:description_de_DE description:description_el_GR description:description_it_IT description:description_pt_PT description:description_sr_RS description:description_es_ES description:description_general speakernotes:speakernotes_en_GB speakernotes:speakernotes_de_DE speakernotes:speakernotes_el_GR speakernotes:speakernotes_it_IT speakernotes:speakernotes_pt_PT speakernotes:speakernotes_sr_RS speakernotes:speakernotes_es_ES speakernotes:speakernotes_general</str>
+      <str name="fl">solr_id, db_id, db_revision_id, kind, timestamp, lastUpdate, language, creator, revision_owner, contributors, tags, revision_count, isRoot, origin, fork_count,
+        active, usage, title:title_en_GB title:title_de_DE title:title_el_GR title:title_it_IT title:title_pt_PT title:title_sr_RS title:title_es_ES title:title_general content:content_en_GB content:content_de_DE content:content_el_GR content:content_it_IT content:content_pt_PT content:content_sr_RS content:content_es_ES content:content_general description:description_en_GB description:description_de_DE description:description_el_GR description:description_it_IT description:description_pt_PT description:description_sr_RS description:description_es_ES description:description_general speakernotes:speakernotes_en_GB speakernotes:speakernotes_de_DE speakernotes:speakernotes_el_GR speakernotes:speakernotes_it_IT speakernotes:speakernotes_pt_PT speakernotes:speakernotes_sr_RS speakernotes:speakernotes_es_ES speakernotes:speakernotes_general</str>
 
       <!-- spellcheck options -->
- 	  <str name="spellcheck.dictionary">default</str>
+      <str name="spellcheck.dictionary">default</str>
       <str name="spellcheck">on</str>
       <str name="spellcheck.extendedResults">true</str>
       <str name="spellcheck.count">10</str>
@@ -859,12 +860,9 @@
       <str>spellcheck</str>
     </arr>
 
-    <!-- facets are provided only for these fields -->
     <lst name="invariants">
-      <str name="facet.field">kind</str>
-      <str name="facet.field">language</str>
-      <str name="facet.field">license</str>
-      <str name="facet.field">contributors</str>
+      <str name="facet.mincount">1</str>
+      <str name="json.nl">arrmap</str>
     </lst>
   </requestHandler>
 
