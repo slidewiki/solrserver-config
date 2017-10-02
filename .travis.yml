@@ -15,7 +15,7 @@ before_install:
 script:
 - docker build . -t slidewiki/solr
 after_success:
-  - openssl aes-256-cbc -K $encrypted_778fbf682c57_key -iv $encrypted_778fbf682c57_iv -in deployment_keys.tar.enc -out deployment_keys.tar -d
+  - openssl aes-256-cbc -K $encrypted_022b56f82ad3_key -iv $encrypted_022b56f82ad3_iv -in deployment_keys.tar.enc -out deployment_keys.tar -d
   - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ] ; then  ./travis_scripts/dockerhub.sh; fi
   - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ] ; then ./travis_scripts/deploy.sh; fi
   - rm deployment_keys.tar;
