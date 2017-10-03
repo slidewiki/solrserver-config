@@ -1,4 +1,4 @@
-FROM solr
+FROM solr:7.0.0
 MAINTAINER Paul Baptista <pbaptist@uni-bonn.de>
 
 
