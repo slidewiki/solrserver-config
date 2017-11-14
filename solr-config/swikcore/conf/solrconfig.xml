@@ -832,17 +832,17 @@
       <str name="defType">edismax</str>
 
       <!-- default query fields -->
-      <str name="qf">title_en_GB title_de_DE title_el_GR title_it_IT title_pt_PT title_sr_RS title_es_ES title_general content_en_GB content_de_DE content_el_GR content_it_IT content_pt_PT content_sr_RS content_es_ES content_general description_en_GB description_de_DE description_el_GR description_it_IT description_pt_PT description_sr_RS description_es_ES description_general speakernotes_en_GB speakernotes_de_DE speakernotes_el_GR speakernotes_it_IT speakernotes_pt_PT speakernotes_sr_RS speakernotes_es_ES speakernotes_general</str>
+      <str name="qf">title_en_GB title_de_DE title_el_GR title_it_IT title_pt_PT title_sr_RS title_es_ES title_nl_NL title_general content_en_GB content_de_DE content_el_GR content_it_IT content_pt_PT content_sr_RS content_es_ES content_nl_NL content_general description_en_GB description_de_DE description_el_GR description_it_IT description_pt_PT description_sr_RS description_es_ES description_nl_NL description_general speakernotes_en_GB speakernotes_de_DE speakernotes_el_GR speakernotes_it_IT speakernotes_pt_PT speakernotes_sr_RS speakernotes_es_ES speakernotes_nl_NL speakernotes_general</str>
 
       <!-- field aliases for queries-->
-      <str name="f.title.qf">title_en_GB title_de_DE title_el_GR title_it_IT title_pt_PT title_sr_RS title_es_ES title_general</str>
-      <str name="f.content.qf">content_en_GB content_de_DE content_el_GR content_it_IT content_pt_PT content_sr_RS content_es_ES content_general</str>
-      <str name="f.description.qf">description_en_GB description_de_DE description_el_GR description_it_IT description_pt_PT description_sr_RS description_es_ES description_general</str>
-      <str name="f.speakernotes.qf">speakernotes_en_GB speakernotes_de_DE speakernotes_el_GR speakernotes_it_IT speakernotes_pt_PT speakernotes_sr_RS speakernotes_es_ES speakernotes_general</str>
+      <str name="f.title.qf">title_en_GB title_de_DE title_el_GR title_it_IT title_pt_PT title_sr_RS title_es_ES title_nl_NL title_general</str>
+      <str name="f.content.qf">content_en_GB content_de_DE content_el_GR content_it_IT content_pt_PT content_sr_RS content_es_ES content_nl_NL content_general</str>
+      <str name="f.description.qf">description_en_GB description_de_DE description_el_GR description_it_IT description_pt_PT description_sr_RS description_es_ES description_nl_NL description_general</str>
+      <str name="f.speakernotes.qf">speakernotes_en_GB speakernotes_de_DE speakernotes_el_GR speakernotes_it_IT speakernotes_pt_PT speakernotes_sr_RS speakernotes_es_ES speakernotes_nl_NL speakernotes_general</str>
       
       <!-- field alias for results -->
       <str name="fl">solr_id, db_id, db_revision_id, kind, timestamp, lastUpdate, language, creator, revision_owner, contributors, tags, revision_count, isRoot, origin, fork_count,
-        active, usage, title:title_en_GB title:title_de_DE title:title_el_GR title:title_it_IT title:title_pt_PT title:title_sr_RS title:title_es_ES title:title_general content:content_en_GB content:content_de_DE content:content_el_GR content:content_it_IT content:content_pt_PT content:content_sr_RS content:content_es_ES content:content_general description:description_en_GB description:description_de_DE description:description_el_GR description:description_it_IT description:description_pt_PT description:description_sr_RS description:description_es_ES description:description_general speakernotes:speakernotes_en_GB speakernotes:speakernotes_de_DE speakernotes:speakernotes_el_GR speakernotes:speakernotes_it_IT speakernotes:speakernotes_pt_PT speakernotes:speakernotes_sr_RS speakernotes:speakernotes_es_ES speakernotes:speakernotes_general</str>
+        active, usage, title:title_en_GB title:title_de_DE title:title_el_GR title:title_it_IT title:title_pt_PT title:title_sr_RS title:title_es_ES title:title_nl_NL title:title_general content:content_en_GB content:content_de_DE content:content_el_GR content:content_it_IT content:content_pt_PT content:content_sr_RS content:content_es_ES content:content_nl_NL content:content_general description:description_en_GB description:description_de_DE description:description_el_GR description:description_it_IT description:description_pt_PT description:description_sr_RS description:description_es_ES description_nl_NL description:description_general speakernotes:speakernotes_en_GB speakernotes:speakernotes_de_DE speakernotes:speakernotes_el_GR speakernotes:speakernotes_it_IT speakernotes:speakernotes_pt_PT speakernotes:speakernotes_sr_RS speakernotes:speakernotes_es_ES speakernotes:speakernotes_nl_NL speakernotes:speakernotes_general</str>
 
       <!-- spellcheck options -->
       <str name="spellcheck.dictionary">default</str>
@@ -876,13 +876,13 @@
       <str name="defType">edismax</str>
 
       <!-- default query fields -->
-      <str name="qf">title_en_GB title_de_DE title_el_GR title_it_IT title_pt_PT title_sr_RS title_es_ES title_general content_en_GB content_de_DE content_el_GR content_it_IT content_pt_PT content_sr_RS content_es_ES content_general description_en_GB description_de_DE description_el_GR description_it_IT description_pt_PT description_sr_RS description_es_ES description_general speakernotes_en_GB speakernotes_de_DE speakernotes_el_GR speakernotes_it_IT speakernotes_pt_PT speakernotes_sr_RS speakernotes_es_ES speakernotes_general</str>
+      <str name="qf">title_en_GB title_de_DE title_el_GR title_it_IT title_pt_PT title_sr_RS title_es_ES title_nl_NL title_general content_en_GB content_de_DE content_el_GR content_it_IT content_pt_PT content_sr_RS content_es_ES content_nl_NL content_general description_en_GB description_de_DE description_el_GR description_it_IT description_pt_PT description_sr_RS description_es_ES description_nl_NL description_general speakernotes_en_GB speakernotes_de_DE speakernotes_el_GR speakernotes_it_IT speakernotes_pt_PT speakernotes_sr_RS speakernotes_es_ES speakernotes_nl_NL speakernotes_general</str>
 
       <!-- field aliases -->
-      <str name="f.title.qf">title_en_GB title_de_DE title_el_GR title_it_IT title_pt_PT title_sr_RS title_es_ES title_general</str>
-      <str name="f.content.qf">content_en_GB content_de_DE content_el_GR content_it_IT content_pt_PT content_sr_RS content_es_ES content_general</str>
-      <str name="f.description.qf">description_en_GB description_de_DE description_el_GR description_it_IT description_pt_PT description_sr_RS description_es_ES description_general</str>
-      <str name="f.speakernotes.qf">speakernotes_en_GB speakernotes_de_DE speakernotes_el_GR speakernotes_it_IT speakernotes_pt_PT speakernotes_sr_RS speakernotes_es_ES speakernotes_general</str>
+      <str name="f.title.qf">title_en_GB title_de_DE title_el_GR title_it_IT title_pt_PT title_sr_RS title_es_ES title_nl_NL title_general</str>
+      <str name="f.content.qf">content_en_GB content_de_DE content_el_GR content_it_IT content_pt_PT content_sr_RS content_es_ES content_nl_NL content_general</str>
+      <str name="f.description.qf">description_en_GB description_de_DE description_el_GR description_it_IT description_pt_PT description_sr_RS description_es_ES description_nl_NL description_general</str>
+      <str name="f.speakernotes.qf">speakernotes_en_GB speakernotes_de_DE speakernotes_el_GR speakernotes_it_IT speakernotes_pt_PT speakernotes_sr_RS speakernotes_es_ES speakernotes_nl_NL speakernotes_general</str>
     </lst>
 
     <lst name="invariants">
