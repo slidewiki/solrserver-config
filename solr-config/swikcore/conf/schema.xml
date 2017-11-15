@@ -453,6 +453,7 @@
   <field name="title_pt_PT" type="text_pt" multiValued="false" indexed="true" stored="true"/>
   <field name="title_sr_RS" type="text_sr" multiValued="false" indexed="true" stored="true"/>
   <field name="title_es_ES" type="text_es" multiValued="false" indexed="true" stored="true"/>
+  <field name="title_nl_NL" type="text_nl" multiValued="false" indexed="true" stored="true"/>
   <field name="title_general" type="text_general" multiValued="false" indexed="true" stored="true"/>
   
   <!-- language specific CONTENT fields -->
@@ -463,6 +464,7 @@
   <field name="content_pt_PT" type="text_pt" multiValued="false" indexed="true" stored="true"/>
   <field name="content_sr_RS" type="text_sr" multiValued="false" indexed="true" stored="true"/>
   <field name="content_es_ES" type="text_es" multiValued="false" indexed="true" stored="true"/>
+  <field name="content_nl_NL" type="text_nl" multiValued="false" indexed="true" stored="true"/>
   <field name="content_general" type="text_general" multiValued="false" indexed="true" stored="true"/>
 
   <!-- language specific DESCRIPTION fields -->
@@ -473,6 +475,7 @@
   <field name="description_pt_PT" type="text_pt" multiValued="false" indexed="true" stored="true"/>
   <field name="description_sr_RS" type="text_sr" multiValued="false" indexed="true" stored="true"/>
   <field name="description_es_ES" type="text_es" multiValued="false" indexed="true" stored="true"/>
+  <field name="description_nl_NL" type="text_nl" multiValued="false" indexed="true" stored="true"/>
   <field name="description_general" type="text_general" multiValued="false" indexed="true" stored="true"/>
 
   <!-- language specific SPEAKERNOTES fields -->
@@ -483,6 +486,7 @@
   <field name="speakernotes_pt_PT" type="text_pt" multiValued="false" indexed="true" stored="true"/>
   <field name="speakernotes_sr_RS" type="text_sr" multiValued="false" indexed="true" stored="true"/>
   <field name="speakernotes_es_ES" type="text_es" multiValued="false" indexed="true" stored="true"/>
+  <field name="speakernotes_nl_NL" type="text_nl" multiValued="false" indexed="true" stored="true"/>
   <field name="speakernotes_general" type="text_general" multiValued="false" indexed="true" stored="true"/>
 
   <!-- autocomplete field populated by copy from the fields below -->
