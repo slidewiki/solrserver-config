@@ -92,6 +92,8 @@
   <field name="namedentity" type="string" multiValued="true" indexed="true" stored="true"/>
   <field name="spotlightentity" type="string" multiValued="true" indexed="true" stored="true"/>
 
+  <field name="language" type="string" multiValued="false" indexed="true" stored="true"/>
+
   <dynamicField name="*_descendent_path" type="descendent_path" indexed="true" stored="true"/>
   <dynamicField name="*_ancestor_path" type="ancestor_path" indexed="true" stored="true"/>
   <dynamicField name="*_coordinate" type="tdouble" indexed="true" stored="false" useDocValuesAsStored="false"/>
