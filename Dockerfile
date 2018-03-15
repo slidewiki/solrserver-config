@@ -15,10 +15,15 @@ RUN sed -i 's/#SOLR_HEAP=".*"/SOLR_HEAP="2048m"/' /opt/solr/bin/solr.in.sh && \
 # add configuration for SlideWiki core
 ADD ./solr-config/ /opt/solr/server/solr
 
-# data directory needs special owner to be accessible for solr user
+# data directory for swikcore needs special owner to be accessible for solr user
 RUN mkdir /solr-data && chown -R 8983:8983 /opt/solr/server/solr && chown -R 8983:8983 /solr-data
 
 VOLUME ["/solr-data"]
+
+# data directory for swiknlp needs special owner to be accessible for solr user
+RUN mkdir /solr-data-nlp && chown -R 8983:8983 /solr-data-nlp
+
+VOLUME ["/solr-data-nlp"]
 
 # ----------------- #
 #       Start       #
