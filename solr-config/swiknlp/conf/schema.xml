@@ -89,9 +89,9 @@
   <field name="solr_id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
   <field name="_id" type="int" multiValued="false" indexed="true" stored="true"/>
   
-  <field name="token" type="string" multiValued="true" indexed="true" stored="true"/>
-  <field name="namedentity" type="string" multiValued="true" indexed="true" stored="true"/>
-  <field name="spotlightentity" type="string" multiValued="true" indexed="true" stored="true"/>
+  <field name="token" type="string" multiValued="true" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
+  <field name="namedentity" type="string" multiValued="true" indexed="true" stored="true"  termVectors="true" termPositions="true" termOffsets="true"/>
+  <field name="spotlightentity" type="string" multiValued="true" indexed="true" stored="true"  termVectors="true" termPositions="true" termOffsets="true"/>
 
   <field name="language" type="string" multiValued="false" indexed="true" stored="true"/>
   
