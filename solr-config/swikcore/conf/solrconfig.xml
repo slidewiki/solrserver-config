@@ -828,11 +828,11 @@
       <str name="echoParams">explicit</str>
       <str name="wt">json</str>
       <str name="rows">50</str>
-      <str name="indent">true</str>
+      <str name="indent">false</str>
       <str name="defType">edismax</str>
 
       <!-- default query fields -->
-      <str name="qf">title_en_GB title_de_DE title_el_GR title_it_IT title_pt_PT title_sr_RS title_es_ES title_nl_NL title_general content_en_GB content_de_DE content_el_GR content_it_IT content_pt_PT content_sr_RS content_es_ES content_nl_NL content_general description_en_GB description_de_DE description_el_GR description_it_IT description_pt_PT description_sr_RS description_es_ES description_nl_NL description_general speakernotes_en_GB speakernotes_de_DE speakernotes_el_GR speakernotes_it_IT speakernotes_pt_PT speakernotes_sr_RS speakernotes_es_ES speakernotes_nl_NL speakernotes_general</str>
+      <str name="qf">db_id title_en_GB title_de_DE title_el_GR title_it_IT title_pt_PT title_sr_RS title_es_ES title_nl_NL title_general content_en_GB content_de_DE content_el_GR content_it_IT content_pt_PT content_sr_RS content_es_ES content_nl_NL content_general description_en_GB description_de_DE description_el_GR description_it_IT description_pt_PT description_sr_RS description_es_ES description_nl_NL description_general speakernotes_en_GB speakernotes_de_DE speakernotes_el_GR speakernotes_it_IT speakernotes_pt_PT speakernotes_sr_RS speakernotes_es_ES speakernotes_nl_NL speakernotes_general</str>
 
       <!-- field aliases for queries-->
       <str name="f.title.qf">title_en_GB title_de_DE title_el_GR title_it_IT title_pt_PT title_sr_RS title_es_ES title_nl_NL title_general</str>
@@ -855,6 +855,13 @@
       <str name="spellcheck.collateExtendedResults">true</str>
       <str name="spellcheck.maxCollationTries">10</str>
       <str name="spellcheck.maxCollations">1</str>
+
+      <!-- highlight options -->
+      <str name="hl">on</str>
+      <str name="hl.fl">title_*, description_*, content_*, speakernotes_*</str>
+      <str name="hl.requireFieldMatch">true</str>
+      <str name="hl.usePhraseHighlighter">true</str>
+      <str name="hl.highlightMultiTerm">true</str>
     </lst>
     <arr name="last-components">
       <str>spellcheck</str>
@@ -872,7 +879,7 @@
       <str name="echoParams">explicit</str>
       <str name="wt">json</str>
       <str name="rows">0</str>
-      <str name="indent">true</str>
+      <str name="indent">false</str>
       <str name="defType">edismax</str>
 
       <!-- default query fields -->
@@ -897,7 +904,7 @@
       <str name="echoParams">explicit</str>
       <str name="wt">json</str>
       <str name="rows">10</str>
-      <str name="indent">true</str>
+      <str name="indent">false</str>
       <str name="defType">edismax</str>
       <str name="qf">username^10 surname forename</str>
       <str name="fl">solr_id db_id username surname forename</str>
