@@ -831,9 +831,12 @@
       <str name="indent">false</str>
       <str name="defType">edismax</str>
 
-      <!-- default query fields -->
-      <str name="qf">db_id title_en_GB title_de_DE title_el_GR title_it_IT title_pt_PT title_sr_RS title_es_ES title_nl_NL title_general content_en_GB content_de_DE content_el_GR content_it_IT content_pt_PT content_sr_RS content_es_ES content_nl_NL content_general description_en_GB description_de_DE description_el_GR description_it_IT description_pt_PT description_sr_RS description_es_ES description_nl_NL description_general speakernotes_en_GB speakernotes_de_DE speakernotes_el_GR speakernotes_it_IT speakernotes_pt_PT speakernotes_sr_RS speakernotes_es_ES speakernotes_nl_NL speakernotes_general</str>
+      <!-- default query fields and their boost factors-->
+      <str name="qf">db_id^10 title_en_GB^5 title_de_DE^5 title_el_GR^5 title_it_IT^5 title_pt_PT^5 title_sr_RS^5 title_es_ES^5 title_nl_NL^5 title_general^5 content_en_GB content_de_DE content_el_GR content_it_IT content_pt_PT content_sr_RS content_es_ES content_nl_NL content_general description_en_GB^2 description_de_DE^2 description_el_GR^2 description_it_IT^2 description_pt_PT^2 description_sr_RS^2 description_es_ES^2 description_nl_NL^2 description_general^2 speakernotes_en_GB^0.5 speakernotes_de_DE^0.5 speakernotes_el_GR^0.5 speakernotes_it_IT^0.5 speakernotes_pt_PT^0.5 speakernotes_sr_RS^0.5 speakernotes_es_ES^0.5 speakernotes_nl_NL^0.5 speakernotes_general^0.5</str>
 
+      <!-- field in which phrases are identified -->
+      <str name="pf">title_en_GB^5 title_de_DE^5 title_el_GR^5 title_it_IT^5 title_pt_PT^5 title_sr_RS^5 title_es_ES^5 title_nl_NL^5 title_general^5 content_en_GB content_de_DE content_el_GR content_it_IT content_pt_PT content_sr_RS content_es_ES content_nl_NL content_general description_en_GB^2 description_de_DE^2 description_el_GR^2 description_it_IT^2 description_pt_PT^2 description_sr_RS^2 description_es_ES^2 description_nl_NL^2 description_general^2 speakernotes_en_GB speakernotes_de_DE speakernotes_el_GR speakernotes_it_IT speakernotes_pt_PT speakernotes_sr_RS speakernotes_es_ES speakernotes_nl_NL speakernotes_general</str>
+      
       <!-- field aliases for queries-->
       <str name="f.title.qf">title_en_GB title_de_DE title_el_GR title_it_IT title_pt_PT title_sr_RS title_es_ES title_nl_NL title_general</str>
       <str name="f.content.qf">content_en_GB content_de_DE content_el_GR content_it_IT content_pt_PT content_sr_RS content_es_ES content_nl_NL content_general</str>
