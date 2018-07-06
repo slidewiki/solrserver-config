@@ -458,15 +458,15 @@
   <field name="title_general" type="text_general" multiValued="false" indexed="true" stored="true"/>
   
   <!-- language specific CONTENT fields -->
-  <field name="content_en_GB" type="text_en" multiValued="false" indexed="true" stored="true"/>
-  <field name="content_de_DE" type="text_de" multiValued="false" indexed="true" stored="true"/>
-  <field name="content_el_GR" type="text_el" multiValued="false" indexed="true" stored="true"/>
-  <field name="content_it_IT" type="text_it" multiValued="false" indexed="true" stored="true"/>
-  <field name="content_pt_PT" type="text_pt" multiValued="false" indexed="true" stored="true"/>
-  <field name="content_sr_RS" type="text_sr" multiValued="false" indexed="true" stored="true"/>
-  <field name="content_es_ES" type="text_es" multiValued="false" indexed="true" stored="true"/>
-  <field name="content_nl_NL" type="text_nl" multiValued="false" indexed="true" stored="true"/>
-  <field name="content_general" type="text_general" multiValued="false" indexed="true" stored="true"/>
+  <field name="content_en_GB" type="text_en" multiValued="true" indexed="true" stored="true"/>
+  <field name="content_de_DE" type="text_de" multiValued="true" indexed="true" stored="true"/>
+  <field name="content_el_GR" type="text_el" multiValued="true" indexed="true" stored="true"/>
+  <field name="content_it_IT" type="text_it" multiValued="true" indexed="true" stored="true"/>
+  <field name="content_pt_PT" type="text_pt" multiValued="true" indexed="true" stored="true"/>
+  <field name="content_sr_RS" type="text_sr" multiValued="true" indexed="true" stored="true"/>
+  <field name="content_es_ES" type="text_es" multiValued="true" indexed="true" stored="true"/>
+  <field name="content_nl_NL" type="text_nl" multiValued="true" indexed="true" stored="true"/>
+  <field name="content_general" type="text_general" multiValued="true" indexed="true" stored="true"/>
 
   <!-- language specific DESCRIPTION fields -->
   <field name="description_en_GB" type="text_en" multiValued="false" indexed="true" stored="true"/>
