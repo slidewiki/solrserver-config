@@ -424,12 +424,12 @@
   <field name="lastUpdate" type="date" multiValued="false" indexed="true" stored="true"/>
 
   <field name="kind" type="string" multiValued="false" indexed="true" stored="true"/>
-  <field name="language" type="string" multiValued="false" indexed="true" stored="true"/>
+  <field name="language" type="string" multiValued="false" indexed="true" stored="true" docValues="true"/>
 
   <field name="usage" type="string" multiValued="true" indexed="false" stored="true"/>
   <field name="roots" type="int" multiValued="true" indexed="true" stored="true"/>
 
-  <field name="creator" type="int" multiValued="false" indexed="true" stored="true"/>
+  <field name="creator" type="int" multiValued="false" indexed="true" stored="true" docValues="true"/>
   <field name="creator_username" type="string" multiValued="false" indexed="true" stored="true"/>
 
   <field name="revision_owner" type="int" multiValued="false" indexed="true" stored="true"/>
@@ -438,7 +438,7 @@
   <field name="contributors" type="int" multiValued="true" indexed="true" stored="true"/>
   <field name="contributors_useraname" type="string" multiValued="true" indexed="true" stored="true"/>
   
-  <field name="tags" type="string" multiValued="true" indexed="true" stored="true"/>
+  <field name="tags" type="string" multiValued="true" indexed="true" stored="true" docValues="true"/>
 
   <field name="active" type="boolean" multiValued="false" indexed="true" stored="true"/>
   <field name="isRoot" type="boolean" multiValued="false" indexed="true" stored="true"/>
