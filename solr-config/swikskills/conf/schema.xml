@@ -106,6 +106,7 @@
   
   <!-- solr ids  -->
   <field name="solr_id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
+  <field name="_id" type="int" multiValued="false" indexed="true" required="true" stored="true"/>
 
   <field name="conceptType" type="string" multiValued="false" indexed="true" stored="true"/>  
   <field name="conceptUri" type="string" multiValued="false" indexed="true" stored="true" termVectors="true"/>
