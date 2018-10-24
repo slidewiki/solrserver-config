@@ -446,6 +446,8 @@
   <field name="fork_count" type="int" multiValued="false" indexed="false" stored="true"/>
   <field name="revision_count" type="int" multiValued="false" indexed="false" stored="true"/>
   
+  <field name="original" type="boolean" multiValued="false" indexed="true" stored="true"/>
+
   <!-- language specific TITLE fields -->
   <field name="title_en_GB" type="text_en" multiValued="false" indexed="true" stored="true"/>
   <field name="title_de_DE" type="text_de" multiValued="false" indexed="true" stored="true"/>
