@@ -452,6 +452,7 @@
   <field name="fork_count" type="int" multiValued="false" indexed="false" stored="true"/>
   <field name="revision_count" type="int" multiValued="false" indexed="false" stored="true"/>
   <field name="firstSlide" type="string" multiValued="false" indexed="false" stored="true"/>
+  <field name="isOriginal" type="boolean" multiValued="false" indexed="true" stored="true"/>
 
   <!-- language specific TITLE fields -->
   <field name="title_en_GB" type="text_en" multiValued="false" indexed="true" stored="true"/>
