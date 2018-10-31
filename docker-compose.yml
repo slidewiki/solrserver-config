@@ -14,3 +14,4 @@ solrserver:
   volumes: 
     - solr-data:/solr-data
     - solr-data-nlp:/solr-data-nlp
+    - solr-data-skills:/solr-data-skills
