@@ -17,13 +17,15 @@ ADD ./solr-config/ /opt/solr/server/solr
 
 # data directory for swikcore needs special owner to be accessible for solr user
 RUN mkdir /solr-data && chown -R 8983:8983 /opt/solr/server/solr && chown -R 8983:8983 /solr-data
-
 VOLUME ["/solr-data"]
 
 # data directory for swiknlp needs special owner to be accessible for solr user
 RUN mkdir /solr-data-nlp && chown -R 8983:8983 /solr-data-nlp
-
 VOLUME ["/solr-data-nlp"]
+
+# data directory for swiknlp needs special owner to be accessible for solr user
+RUN mkdir /solr-data-skills && chown -R 8983:8983 /solr-data-skills
+VOLUME ["/solr-data-skills"]
 
 # ----------------- #
 #       Start       #
