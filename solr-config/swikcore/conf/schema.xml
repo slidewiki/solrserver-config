@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Solr managed schema - automatically generated - DO NOT EDIT -->
 <schema name="example-data-driven-schema" version="1.6">
-  <uniqueKey>solr_id</uniqueKey>
+  <uniqueKey>id</uniqueKey>
   <fieldType name="ancestor_path" class="solr.TextField">
     <analyzer type="index">
       <tokenizer class="solr.KeywordTokenizerFactory"/>
@@ -407,9 +407,20 @@
   <field name="_root_" type="string" docValues="false" indexed="true" stored="false"/>
   <field name="_text_" type="text_general" multiValued="true" indexed="true" stored="false"/>
   <field name="_version_" type="long" indexed="true" stored="false"/>
+  <field name="stream_size" type="string" indexed="false" stored="false"/>
+  <field name="x_parsed_by" type="string" indexed="false" stored="false"/>
+  <field name="stream_content_type" type="string" indexed="false" stored="false"/>
+  <field name="content_encoding" type="string" indexed="false" stored="false"/>
+  <field name="resourcename" type="string" indexed="false" stored="false"/>
+  <field name="content_type" type="string" indexed="false" stored="false"/>
+  <field name="dc_title" type="string" indexed="false" stored="false"/>
+  <field name="title" type="string" indexed="false" stored="false"/>
+  <field name="content_language" type="string" indexed="false" stored="false"/>
+  
+
   
   <!-- solr ids for doc and parents -->
-  <field name="solr_id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
+  <field name="id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
   <field name="parents" type="string" multiValued="true" indexed="true" stored="true"/>
 
   <!-- points to the origin document -->
